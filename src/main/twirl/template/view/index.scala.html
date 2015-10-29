@@ -1,0 +1,22 @@
+@(title: String)(listaConceptos: List[org.generador.Concepto])
+
+@main(title) {
+
+@*Comentario que no se ve en lo generado*@
+
+<h1>Home page</h1>
+
+<!--Este comentario si se va a ver-->
+
+<ul>
+
+    @for(concepto <- listaConceptos){
+    <li>
+        <u>@concepto.concepto</u>
+        <b>@concepto.descripcion</b>
+        <i>@concepto.valor</i>
+    </li>
+    }
+
+</ul>
+}
